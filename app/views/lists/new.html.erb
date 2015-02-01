@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-6">
+    <h1>Create a New list</h1>
+    <%= form_for @list do |f| %>
+      <div class="form-group">
+        <%= f.label :title %>
+        <%= f.text_field :title, class: 'form-control', placeholder: 'Enter List Name' %>
+      </div>
+      <div class="form-group">
+        <%= f.submit "Save", class: 'btn btn-success' %>
+    <% end %>
+    </div>
+  </div>
+  <div class="col-md-4">
+  </div>
+</div
+        
