@@ -1,0 +1,9 @@
+
+<%= content_tag :tr, id: "item-#{item.id}" do %>
+  <td><%= item.name %></td>
+  <td><%= 7 - item.days_left %></td>
+<td><%= link_to "", [item.list, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %></td>
+</tr>
+<% end %>
+
+          

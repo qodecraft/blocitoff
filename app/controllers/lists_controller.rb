@@ -1,9 +1,11 @@
 class ListsController < ApplicationController
   def index
+    @lists = current_user.lists.all
   end
 
   def show
-    @list = List.find(params[:id])
+    @list = List.find(params[:id])   
+    @items = @list.items
   end
 
   def new
@@ -11,7 +13,7 @@ class ListsController < ApplicationController
   end
   
   def create
-    @list = List.new(params.require(:list).permit(:title))
+    @list = current_user.lists.build(params.require(:list).permit(:title))
     if @list.save
       redirect_to @list
     else

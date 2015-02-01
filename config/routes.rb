@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
   
-  resources :lists
+  resources :lists do
+    resources :items, only: [:create, :destroy ]
+  end
   
   root to: 'welcome#index'
 
