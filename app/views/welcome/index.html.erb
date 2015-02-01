@@ -1,2 +1,21 @@
-<h1>Blocitoff</h1>
-<p>Welcome to blocitoff, the best task management app!</p>
+
+<div class='jumbotron'>
+  <h1>Blocitoff<h1>
+     <p>Blocitoff is a simple task management app that keeps you organized<p>
+     <p>
+        <%= link_to "Sign up", new_user_registration_path, class: 'btn btn-success' %>
+        <%= link_to "Sign in", new_user_session_path, class: 'btn btn-success' %>
+    </p>
+    </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Add tasks Easily</h3>
+          <p>Bloccitoff makes it easy to add tasks with a click of a button. Sign up now to create your own lists and help yourself stay organized<p>
+        </div>
+        <div class="col-md-6">
+          <h3>Self destructing tasks</h3>
+            <p>Each task on your lists automatically get delted within 7 days of creation. This makes sure your lists aren't cluttered with unwanted tasks or completed tasks</p>
+         </div>
+      </div>
